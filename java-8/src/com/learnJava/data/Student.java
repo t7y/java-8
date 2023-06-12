@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class Student {
+    List<String> activities = new ArrayList<>();
     private String name;
     private int gradeLevel;
     private double gpa;
@@ -12,15 +13,7 @@ public class Student {
     private int noteBooks;
     private Optional<Bike> bike;
 
-    public Optional<Bike> getBike() {
-        return bike;
-    }
-
-    public void setBike(Optional<Bike> bike) {
-        this.bike = bike;
-    }
-
-    public Student(){
+    public Student() {
 
     }
 
@@ -33,15 +26,6 @@ public class Student {
         this.activities = activities;
     }
 
-    public int getNoteBooks() {
-
-        return noteBooks;
-    }
-
-    public void setNoteBooks(int noteBooks) {
-        this.noteBooks = noteBooks;
-    }
-
     public Student(String name, int gradeLevel, double gpa, String gender, List<String> activities) {
         this.name = name;
         this.gradeLevel = gradeLevel;
@@ -52,6 +36,23 @@ public class Student {
 
     public Student(String s) {
         this.name = s;
+    }
+
+    public Optional<Bike> getBike() {
+        return bike;
+    }
+
+    public void setBike(Optional<Bike> bike) {
+        this.bike = bike;
+    }
+
+    public int getNoteBooks() {
+
+        return noteBooks;
+    }
+
+    public void setNoteBooks(int noteBooks) {
+        this.noteBooks = noteBooks;
     }
 
     public String getGender() {
@@ -86,9 +87,7 @@ public class Student {
         this.gpa = gpa;
     }
 
-    List<String> activities = new ArrayList<>();
-
-    public  List<String> getActivities() {
+    public List<String> getActivities() {
         return this.activities;
     }
 
@@ -96,7 +95,7 @@ public class Student {
         this.activities = activities;
     }
 
-    public void printListOfActivities(){
+    public void printListOfActivities() {
 
         System.out.println("List of Activities are : " + this.activities);
     }
@@ -104,12 +103,12 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" +
-                "name='" + name + '\'' +
-                ", gradeLevel=" + gradeLevel +
-                ", gpa=" + gpa +
-                ", gender='" + gender + '\'' +
-                ", activities=" + activities +
-                '}';
+            "name='" + name + '\'' +
+            ", gradeLevel=" + gradeLevel +
+            ", gpa=" + gpa +
+            ", gender='" + gender + '\'' +
+            ", activities=" + activities +
+            '}';
     }
 
 
